@@ -12,8 +12,8 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   rabbitmq:
     host: 10.0.0.191
-    port: adminUser
-    username:
+    port: 5672
+    username: adminUser
     password: dumpass
 
   flyway:
