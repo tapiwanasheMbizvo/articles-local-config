@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://10.0.0.191:5443/api_db
+    username: strongUser
+    password: strong-p#44
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: false
+    show-sql: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  rabbitmq:
+    host: 10.0.0.191
+    port: adminUser
+    username:
+    password: dumpass
+
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://10.0.0.191:5443/api_db
+    user: strongUser
+    password: strong-p#44
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+
+springdoc:
+  swagger-ui:
+    config-url: /openapi/backend-api.yaml
+    disable-swagger-default-url: true
+
+server:
+  port: 8082
